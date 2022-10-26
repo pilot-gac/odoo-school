@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8" ?>
 <odoo>
     <record id="doctor_model_tree" model="ir.ui.view">
         <field name="name">doctor.model.tree ()</field>
@@ -28,4 +29,6 @@
         <field name="res_model">doctor.model</field>
         <field name="view_mode">tree,form</field>
     </record>
+    <menuitem id="doctor_model_menu" action="doctor_model_act_window" parent="hospital_main_menu" name="Doctor"
+              sequence="200"/>
 </odoo>
