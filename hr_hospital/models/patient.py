@@ -5,8 +5,8 @@ from odoo import models, fields
 _logger = logging.getLogger(__name__)
 
 
-class Patient(models.Model):
-    _name = 'hr.hosp.patient'
+class PatientModel(models.Model):
+    _name = 'patient.model'
     _description = 'Patient'
 
     name = fields.Char()
@@ -16,4 +16,4 @@ class Patient(models.Model):
     card = fields.Char()
 
     doctor_ids = fields.Many2many(
-        comodel_name='hr.hosp.doctor', )
+        comodel_name='doctor.model', )

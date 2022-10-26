@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-        <record id="hr_hosp_patient_tree" model="ir.ui.view">
-            <field name="name">hr.hosp.patient.tree ()</field>
-            <field name="model">hr.hosp.patient</field>
+        <record id="patient_model_tree" model="ir.ui.view">
+            <field name="name">patient.model.tree ()</field>
+            <field name="model">patient.model</field>
             <field name="arch" type="xml">
                 <tree>
                     <field name="name"/>
@@ -11,9 +11,9 @@
             </field>
         </record>
 
-        <record id="hr_hosp_patient_form" model="ir.ui.view">
-            <field name="name">hr.hosp.patient.form ()</field>
-            <field name="model">hr.hosp.patient.form</field>
+        <record id="patient_model_form" model="ir.ui.view">
+            <field name="name">patient.model.form ()</field>
+            <field name="model">patient.model.form</field>
             <field name="arch" type="xml">
                 <form>
                     <header></header>
@@ -28,16 +28,16 @@
             </field>
         </record>
 
-        <record id="hr_hosp_patient_act_window" model="ir.actions.act_window">
+        <record id="patient_model_act_window" model="ir.actions.act_window">
             <field name="name">Patient</field>
             <field name="type">ir.actions.act_window</field>
-            <field name="res_model">hr.hosp.patient</field>
+            <field name="res_model">patient.model</field>
             <field name="view_mode">tree,form</field>
         </record>
 
-        <menuitem id="hr_hosp_patient_menu"
-                  action="hr_hosp_patient_act_window"
-                  parent="hr_hosp_catalog_menu"
+        <menuitem id="patient_model_menu"
+                  action="patient_model_act_window"
+                  parent="patient_model_catalog_menu"
                   name="Patient" sequence="200"/>
 
 </odoo>
