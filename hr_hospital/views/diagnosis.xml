@@ -1,16 +1,16 @@
 <odoo>
-    <record id="doctor_model_tree" model="ir.ui.view">
-        <field name="name">doctor.model.tree ()</field>
-        <field name="model">doctor.model</field>
+    <record id="diagnosis_model_tree" model="ir.ui.view">
+        <field name="name">diagnosis.model.tree ()</field>
+        <field name="model">diagnosis.model</field>
         <field name="arch" type="xml">
             <tree>
                 <field name="name"/>
             </tree>
         </field>
     </record>
-    <record id="doctor_model_form" model="ir.ui.view">
-        <field name="name">doctor.model.form ()</field>
-        <field name="model">doctor.model</field>
+    <record id="diagnosis_model_form" model="ir.ui.view">
+        <field name="name">diagnosis.model.form ()</field>
+        <field name="model">diagnosis.model</field>
         <field name="arch" type="xml">
             <form>
                 <header/>
@@ -22,10 +22,10 @@
             </form>
         </field>
     </record>
-    <record id="doctor_model_act_window" model="ir.actions.act_window">
-        <field name="name">Doctor</field>
+    <record id="diagnosis_model_act_window" model="ir.actions.act_window">
+        <field name="name">Diagnosis</field>
         <field name="type">ir.actions.act_window</field>
-        <field name="res_model">doctor.model</field>
+        <field name="res_model">diagnosis.model</field>
         <field name="view_mode">tree,form</field>
     </record>
 </odoo>

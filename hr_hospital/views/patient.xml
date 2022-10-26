@@ -1,43 +1,36 @@
-<?xml version="1.0" encoding="utf-8"?>
 <odoo>
-        <record id="patient_model_tree" model="ir.ui.view">
-            <field name="name">patient.model.tree ()</field>
-            <field name="model">patient.model</field>
-            <field name="arch" type="xml">
-                <tree>
-                    <field name="name"/>
-                    <field name="card"/>
-                </tree>
-            </field>
-        </record>
-
-        <record id="patient_model_form" model="ir.ui.view">
-            <field name="name">patient.model.form ()</field>
-            <field name="model">patient.model.form</field>
-            <field name="arch" type="xml">
-                <form>
-                    <header></header>
-                    <sheet>
-                        <group>
-                            <field name="name"/>
-                            <field name="card"/>
-                            <field name="doctor_ids" widget="many2many_tags"/>
-                        </group>
-                    </sheet>
-                </form>
-            </field>
-        </record>
-
-        <record id="patient_model_act_window" model="ir.actions.act_window">
-            <field name="name">Patient</field>
-            <field name="type">ir.actions.act_window</field>
-            <field name="res_model">patient.model</field>
-            <field name="view_mode">tree,form</field>
-        </record>
-
-        <menuitem id="patient_model_menu"
-                  action="patient_model_act_window"
-                  parent="patient_model_catalog_menu"
-                  name="Patient" sequence="200"/>
-
+    <record id="patient_model_tree" model="ir.ui.view">
+        <field name="name">patient.model.tree ()</field>
+        <field name="model">patient.model</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="card"/>
+            </tree>
+        </field>
+    </record>
+    <record id="patient_model_form" model="ir.ui.view">
+        <field name="name">patient.model.form ()</field>
+        <field name="model">patient.model</field>
+        <field name="arch" type="xml">
+            <form>
+                <header/>
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="card"/>
+                        <field name="doctor_ids" widget="many2many_tags"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <record id="patient_model_act_window" model="ir.actions.act_window">
+        <field name="name">Patient</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">patient.model</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+    <menuitem id="patient_model_menu" action="patient_model_act_window" parent="hospital_patient_menu" name="Patient"
+              sequence="200"/>
 </odoo>
