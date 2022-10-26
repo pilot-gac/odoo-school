@@ -14,6 +14,6 @@ class Patient(models.Model):
     active = fields.Boolean(
         default=True, )
     card = fields.Char()
-    #
+
     doctor_ids = fields.Many2many(
         comodel_name='hr.hosp.doctor', )
