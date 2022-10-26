@@ -14,6 +14,10 @@ class PatientModel(models.Model):
     active = fields.Boolean(
         default=True, )
     card = fields.Char()
+    diagnosis = fields.Char()
 
     doctor_ids = fields.Many2many(
         comodel_name='doctor.model', )
+    diagnosis_ids = fields.Many2many(
+        comodel_name='diagnosis.model'
+    )
